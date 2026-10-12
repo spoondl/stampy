@@ -80,6 +80,14 @@
 const $=id=>document.getElementById(id);
 const filesInput=$('files');
 let items=[],activeId=null,stampColor='#ff6a37',position='br',styleName='classic',colorWasManuallySet=false,previewUrl=null;
+const styleDefaults = {
+  classic:   {color:'#ff6a37', format:'classic',  weight:'bold', shadow:false},
+  red:       {color:'#f04435', format:'classic',  weight:'bold', shadow:false},
+  camcorder: {color:'#ffffff', format:'month',    weight:'bold', shadow:true},
+  film:      {color:'#f7c86b', format:'classic',  weight:'bold', shadow:true},
+  minimal:   {color:'#ffffff', format:'iso',      weight:'normal', shadow:true},
+  green:     {color:'#8dff74', format:'classic',  weight:'bold', shadow:false}
+};
 const cameraPresets = {
   none: {
     style: "classic",
@@ -158,11 +166,21 @@ function p2(n){return String(n).padStart(2,'0')}
 function parseDate(v){if(!v)return null;if(v instanceof Date&&!isNaN(v))return new Date(v.getTime());if(typeof v==='string'){let m=v.match(/^(\d{4})[:\-](\d{2})[:\-](\d{2})[ T](\d{2}):(\d{2}):(\d{2})/);if(m){let d=new Date(+m[1],+m[2]-1,+m[3],+m[4],+m[5],+m[6]);return isNaN(d)?null:d}let d=new Date(v);return isNaN(d)?null:d}return null}
 function localInput(d){if(!d)return '';return `${d.getFullYear()}-${p2(d.getMonth()+1)}-${p2(d.getDate())}T${p2(d.getHours())}:${p2(d.getMinutes())}:${p2(d.getSeconds())}`}
 function dateFor(item){if(activeId===item.id&&$('manualDate').value){const d=new Date($('manualDate').value);if(!isNaN(d))return d}return item.exifDate}
-function formatStamp(d){if(!d)return '';let y=d.getFullYear(),m=p2(d.getMonth()+1),day=p2(d.getDate()),h=p2(d.getHours()),mi=p2(d.getMinutes()),s=p2(d.getSeconds());switch($('dateFormat').value)case 'slash':
-  return `${y}/${m}/${day} ${h}:${mi}:${s}`;
-
-case 'short':
-  return `${String(y).slice(-2)}.${m}.${day}`;{case'us':return `${m}/${day}/${y} ${h}:${mi}:${s}`;case'dayfirst':return `${day}/${m}/${y} ${h}:${mi}:${s}`;case'month':return `${d.toLocaleString('en-US',{month:'short'}).toUpperCase()} ${day} ${y} ${h}:${mi}`;case'iso':return `${y}-${m}-${day} ${h}:${mi}`;case'date':return `${y}:${m}:${day}`;case'time':return `${h}:${mi}:${s}`;default:return `${y}:${m}:${day} ${h}:${mi}:${s}`}}
+function formatStamp(d){
+  if(!d)return '';
+  const y=d.getFullYear(),m=p2(d.getMonth()+1),day=p2(d.getDate()),h=p2(d.getHours()),mi=p2(d.getMinutes()),s=p2(d.getSeconds());
+  switch($('dateFormat').value){
+    case 'slash': return `${y}/${m}/${day} ${h}:${mi}:${s}`;
+    case 'short': return `${String(y).slice(-2)}.${m}.${day}`;
+    case 'us': return `${m}/${day}/${y} ${h}:${mi}:${s}`;
+    case 'dayfirst': return `${day}/${m}/${y} ${h}:${mi}:${s}`;
+    case 'month': return `${d.toLocaleString('en-US',{month:'short'}).toUpperCase()} ${day} ${y} ${h}:${mi}`;
+    case 'iso': return `${y}-${m}-${day} ${h}:${mi}`;
+    case 'date': return `${y}:${m}:${day}`;
+    case 'time': return `${h}:${mi}:${s}`;
+    default: return `${y}:${m}:${day} ${h}:${mi}:${s}`;
+  }
+}
 function applyStyle(name){styleName=name;let s=styleDefaults[name];if(!colorWasManuallySet)stampColor=s.color;$('dateFormat').value=s.format;document.querySelectorAll('.stylebtn').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.style===name)));document.querySelectorAll('.swatch').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.color===stampColor)));refreshPreview()}
  let cameraWordmark = "";
 
