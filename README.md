@@ -1,6 +1,6 @@
-# Timeprint
+# Stampy
 
-A static, browser-based photo timestamp app. It adds retro digital-camera date stamps to new JPEG copies and supports batch export.
+A static, browser-based photo timestamp app. It adds retro digital-camera date stamps to new JPEG copies and supports batch export. Mainly built for digital cameras without this feature already built in.
 
 ## Features
 - Retro styles: Classic LCD, Red LED, Camcorder, Warm Film, Minimal, Green LCD
