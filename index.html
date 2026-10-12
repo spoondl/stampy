@@ -12,6 +12,14 @@
 <style>
 :root{--bg:#f4f1e9;--paper:#fffdf8;--ink:#20211d;--muted:#73746a;--line:#dfddd3;--acid:#d9fa69;--red:#ef463a;--radius:19px}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed;transform:none!important}.shell{max-width:1200px;margin:auto;padding:25px 22px 48px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:54px}.brand{font-size:22px;font-weight:850;letter-spacing:-.06em;display:flex;gap:10px;align-items:center}.logo{display:grid;place-items:center;background:var(--acid);border-radius:10px;width:36px;height:36px;font-size:22px}.privacy{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:8px 12px}.hero{max-width:720px;margin-bottom:30px}.eyebrow{font-size:11px;font-weight:850;letter-spacing:.15em;text-transform:uppercase;color:#686b5e}.hero h1{font-size:clamp(42px,6vw,70px);letter-spacing:-.075em;line-height:.95;margin:13px 0 17px}.hero h1 span{background:var(--acid);padding:0 .1em;border-radius:7px}.hero p{color:var(--muted);line-height:1.65;margin:0;max-width:620px}.workspace{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(310px,.8fr);gap:17px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.panelhead{display:flex;align-items:center;justify-content:space-between;padding:18px 21px;border-bottom:1px solid var(--line)}.panelhead h2{font-size:14px;margin:0;letter-spacing:-.02em}.step{font-size:10px;color:var(--muted);font-weight:800;letter-spacing:.12em}.stage{min-height:390px;background:#eceae1;padding:18px;display:flex;align-items:center;justify-content:center;position:relative}.empty{text-align:center;max-width:330px;padding:22px;color:var(--muted)}.uploadicon{width:54px;height:54px;border:1px solid #d0cec3;border-radius:17px;display:grid;place-items:center;margin:0 auto 16px;font-size:25px;background:#f8f6ef;color:var(--ink)}.empty strong{display:block;color:var(--ink);margin-bottom:7px}.empty p{font-size:12px;line-height:1.6;margin:0 0 16px}.primary,.secondary{border-radius:11px;padding:11px 15px;font-weight:800;font-size:12px;transition:transform .15s}.primary{border:1px solid var(--acid);background:var(--acid);color:#24291a}.secondary{border:1px solid var(--line);background:transparent;color:var(--ink)}button:hover{transform:translateY(-1px)}#preview{display:none;max-width:100%;max-height:600px;object-fit:contain;box-shadow:0 8px 30px #00000014}.status{border-top:1px solid var(--line);padding:12px 17px;display:flex;gap:8px;align-items:center;font-size:11px;color:var(--muted)}.dot{width:7px;height:7px;border-radius:50%;background:#a5a69b;flex:none}.dot.good{background:#57975c}.batchbar{padding:13px 17px;border-top:1px solid var(--line);display:flex;gap:8px;align-items:center;flex-wrap:wrap}.batchbar strong{font-size:12px;margin-right:auto}.batchbar input{display:none}.settings{padding:19px 21px}.field{margin-bottom:17px}.field:last-child{margin-bottom:0}.field label,.labelrow{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:11px;font-weight:800;margin-bottom:8px}.hint{font-weight:500;color:var(--muted)}select,input[type=text],input[type=datetime-local],input[type=number]{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:10px;background:#fffefa;color:var(--ink);outline:none;font-size:12px}input:focus,select:focus{border-color:#879b4b}input[type=range]{width:100%;accent-color:#6e872b}.styles{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.stylebtn{border:1px solid var(--line);border-radius:10px;padding:10px 6px;background:transparent;font-size:11px;text-align:left;min-height:57px}.stylebtn b{display:block;font-size:12px;margin-bottom:5px}.stylebtn[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink);background:#f4f2e9}.sample{font-family:"Courier New",monospace;font-weight:bold;letter-spacing:-.08em}.swatches{display:flex;gap:9px;align-items:center}.swatch{width:27px;height:27px;border-radius:50%;border:2px solid var(--paper);outline:1px solid var(--line)}.swatch[aria-pressed=true]{outline:2px solid var(--ink)}.positions{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.pos{padding:9px 4px;border:1px solid var(--line);border-radius:9px;background:transparent;font-size:10px}.pos[aria-pressed=true]{background:var(--ink);color:white;border-color:var(--ink)}.checkrow{display:flex;align-items:flex-start;gap:9px;font-size:11px;line-height:1.5;color:var(--muted)}.checkrow input{margin-top:2px;accent-color:#6e872b}.meta{border-top:1px solid var(--line);padding:17px 21px}.metatitle{font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:850;color:var(--muted);margin-bottom:9px}.metavalue{font-size:12px;font-weight:800;overflow-wrap:anywhere}.metanote,.notice{font-size:11px;line-height:1.55;color:var(--muted);margin-top:6px}.actions{display:flex;gap:8px;margin-top:14px}.actions button{flex:1}.queue{border-top:1px solid var(--line);padding:15px 17px}.queuetop{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px;font-size:11px;font-weight:800}.filelist{display:flex;flex-direction:column;gap:6px;max-height:220px;overflow:auto}.fileitem{display:flex;align-items:center;gap:9px;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:#fffefa;text-align:left;width:100%;min-width:0}.fileitem.active{border-color:#71863a;background:#f4f7e8}.fileicon{width:31px;height:34px;background:#eceae1;border-radius:6px;display:grid;place-items:center;font-size:10px;font-weight:850;flex:none}.filename{font-size:11px;font-weight:750;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.filedate{font-size:10px;color:var(--muted);margin-top:3px}.fileitem .check{margin-left:auto;font-size:11px;color:#58804b}.notice.error{color:#a43d2e}.footer{display:flex;justify-content:space-between;gap:12px;margin-top:22px;color:var(--muted);font-size:10px}.hidden{display:none!important}.progress{height:4px;background:#e8e6dc;margin-top:10px;border-radius:10px;overflow:hidden}.progress span{height:100%;width:0;display:block;background:#71863a;transition:width .2s}
+#cameraPreset {
+  font-weight: 700;
+  background-color: #fffefa;
+}
+
+#cameraPreset option {
+  font-weight: 500;
+}
 @media(max-width:800px){.shell{padding:19px 13px 35px}.top{margin-bottom:38px}.workspace{grid-template-columns:1fr}.stage{min-height:270px}#preview{max-height:440px}.hero h1{font-size:48px}.footer{flex-direction:column}.privacy{font-size:9px}.styles{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
 </head>
@@ -38,6 +46,23 @@
 <button class="stylebtn" data-style="minimal"><b>Minimal</b><span class="sample" style="color:#fff;text-shadow:1px 1px #333">2004-06-18</span></button>
 <button class="stylebtn" data-style="green"><b>Green LCD</b><span class="sample" style="color:#8dff74">2004/06/18</span></button>
 </div></div>
+ <!-- Camera-specific presets -->
+<div class="field">
+  <label for="cameraPreset">Camera stamp preset</label>
+  <select id="cameraPreset">
+    <option value="none">No camera branding</option>
+    <option value="cybershot">Sony Cyber-shot</option>
+    <option value="exilim">Casio EXILIM</option>
+    <option value="fujifilm">Fujifilm FinePix</option>
+    <option value="powershot">Canon PowerShot</option>
+    <option value="kodak">Kodak EasyShare</option>
+    <option value="olympus">Olympus</option>
+  </select>
+  <div class="metanote">
+    Camera-inspired date formatting and a stylized wordmark.
+    These are recreations, not exact reproductions of every model.
+  </div>
+</div>
 <div class="field"><label for="dateFormat">Date format</label><select id="dateFormat"><option value="classic">2004:06:18 16:32:05 · Camera classic</option><option value="us">06/18/2004 16:32:05 · US</option><option value="dayfirst">18/06/2004 16:32:05 · Day first</option><option value="month">JUN 18 2004 16:32 · Camcorder</option><option value="iso">2004-06-18 16:32 · ISO</option><option value="date">Date only</option><option value="time">Time only</option></select></div>
 <div class="field"><label for="manualDate">Manual capture date/time <span class="hint">optional override</span></label><input type="datetime-local" id="manualDate" step="1"><div class="metanote">Set this to replace the EXIF date for the selected photo. Clear it to use that photo's metadata.</div></div>
 <div class="field"><div class="labelrow"><label for="size">Text size</label><span class="hint" id="sizeValue">3.5% of image width</span></div><input id="size" type="range" min="1.2" max="6" step=".2" value="3.5"></div>
@@ -55,13 +80,76 @@
 const $=id=>document.getElementById(id);
 const filesInput=$('files');
 let items=[],activeId=null,stampColor='#ff6a37',position='br',styleName='classic',colorWasManuallySet=false,previewUrl=null;
-const styleDefaults={
- classic:{color:'#ff6a37',format:'classic',weight:700,shadow:true,spacing:0.02},
- red:{color:'#ff4338',format:'classic',weight:800,shadow:true,spacing:0.025},
- camcorder:{color:'#ffffff',format:'month',weight:700,shadow:true,spacing:0.035},
- film:{color:'#ffd86b',format:'date',weight:700,shadow:true,spacing:0.08},
- minimal:{color:'#ffffff',format:'iso',weight:600,shadow:true,spacing:0},
- green:{color:'#8dff74',format:'classic',weight:700,shadow:true,spacing:0.025}
+const cameraPresets = {
+  none: {
+    style: "classic",
+    format: "classic",
+    color: "#ff6a37",
+    position: "br",
+    wordmark: "",
+    font: "bold 700 1em Arial, sans-serif",
+    spacing: 0
+  },
+
+  cybershot: {
+    style: "classic",
+    format: "us",
+    color: "#ffffff",
+    position: "br",
+    wordmark: "SONY  Cyber-shot",
+    font: "bold 700 1em Arial, sans-serif",
+    spacing: 0
+  },
+
+  exilim: {
+    style: "classic",
+    format: "slash",
+    color: "#ff8a36",
+    position: "br",
+    wordmark: "EXILIM",
+    font: "bold 800 1em Arial, sans-serif",
+    spacing: 0.04
+  },
+
+  fujifilm: {
+    style: "red",
+    format: "short",
+    color: "#ffffff",
+    position: "br",
+    wordmark: "FUJIFILM",
+    font: "bold 700 1em Arial, sans-serif",
+    spacing: 0.02
+  },
+
+  powershot: {
+    style: "minimal",
+    format: "us",
+    color: "#ffffff",
+    position: "br",
+    wordmark: "Canon PowerShot",
+    font: "bold 700 1em Arial, sans-serif",
+    spacing: 0
+  },
+
+  kodak: {
+    style: "film",
+    format: "us",
+    color: "#ffd86b",
+    position: "br",
+    wordmark: "KODAK",
+    font: "bold 800 1em Arial, sans-serif",
+    spacing: 0.05
+  },
+
+  olympus: {
+    style: "green",
+    format: "slash",
+    color: "#8dff74",
+    position: "br",
+    wordmark: "OLYMPUS",
+    font: "bold 700 1em Arial, sans-serif",
+    spacing: 0.02
+  }
 };
 function active(){return items.find(x=>x.id===activeId)||null}
 function setStatus(s,good=false){$('status').textContent=s;$('dot').className='dot'+(good?' good':'')}
@@ -70,8 +158,45 @@ function p2(n){return String(n).padStart(2,'0')}
 function parseDate(v){if(!v)return null;if(v instanceof Date&&!isNaN(v))return new Date(v.getTime());if(typeof v==='string'){let m=v.match(/^(\d{4})[:\-](\d{2})[:\-](\d{2})[ T](\d{2}):(\d{2}):(\d{2})/);if(m){let d=new Date(+m[1],+m[2]-1,+m[3],+m[4],+m[5],+m[6]);return isNaN(d)?null:d}let d=new Date(v);return isNaN(d)?null:d}return null}
 function localInput(d){if(!d)return '';return `${d.getFullYear()}-${p2(d.getMonth()+1)}-${p2(d.getDate())}T${p2(d.getHours())}:${p2(d.getMinutes())}:${p2(d.getSeconds())}`}
 function dateFor(item){if(activeId===item.id&&$('manualDate').value){const d=new Date($('manualDate').value);if(!isNaN(d))return d}return item.exifDate}
-function formatStamp(d){if(!d)return '';let y=d.getFullYear(),m=p2(d.getMonth()+1),day=p2(d.getDate()),h=p2(d.getHours()),mi=p2(d.getMinutes()),s=p2(d.getSeconds());switch($('dateFormat').value){case'us':return `${m}/${day}/${y} ${h}:${mi}:${s}`;case'dayfirst':return `${day}/${m}/${y} ${h}:${mi}:${s}`;case'month':return `${d.toLocaleString('en-US',{month:'short'}).toUpperCase()} ${day} ${y} ${h}:${mi}`;case'iso':return `${y}-${m}-${day} ${h}:${mi}`;case'date':return `${y}:${m}:${day}`;case'time':return `${h}:${mi}:${s}`;default:return `${y}:${m}:${day} ${h}:${mi}:${s}`}}
+function formatStamp(d){if(!d)return '';let y=d.getFullYear(),m=p2(d.getMonth()+1),day=p2(d.getDate()),h=p2(d.getHours()),mi=p2(d.getMinutes()),s=p2(d.getSeconds());switch($('dateFormat').value)case 'slash':
+  return `${y}/${m}/${day} ${h}:${mi}:${s}`;
+
+case 'short':
+  return `${String(y).slice(-2)}.${m}.${day}`;{case'us':return `${m}/${day}/${y} ${h}:${mi}:${s}`;case'dayfirst':return `${day}/${m}/${y} ${h}:${mi}:${s}`;case'month':return `${d.toLocaleString('en-US',{month:'short'}).toUpperCase()} ${day} ${y} ${h}:${mi}`;case'iso':return `${y}-${m}-${day} ${h}:${mi}`;case'date':return `${y}:${m}:${day}`;case'time':return `${h}:${mi}:${s}`;default:return `${y}:${m}:${day} ${h}:${mi}:${s}`}}
 function applyStyle(name){styleName=name;let s=styleDefaults[name];if(!colorWasManuallySet)stampColor=s.color;$('dateFormat').value=s.format;document.querySelectorAll('.stylebtn').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.style===name)));document.querySelectorAll('.swatch').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.color===stampColor)));refreshPreview()}
+ let cameraWordmark = "";
+
+$('cameraPreset').addEventListener('change', () => {
+  const preset = cameraPresets[$('cameraPreset').value];
+  if (!preset) return;
+
+  cameraWordmark = preset.wordmark;
+
+  // Apply the matching base visual style.
+  applyStyle(preset.style);
+
+  // Apply camera-specific settings.
+  $('dateFormat').value = preset.format;
+  stampColor = preset.color;
+  position = preset.position;
+  colorWasManuallySet = false;
+
+  document.querySelectorAll('.swatch').forEach(button => {
+    button.setAttribute(
+      'aria-pressed',
+      String(button.dataset.color === stampColor)
+    );
+  });
+
+  document.querySelectorAll('.pos').forEach(button => {
+    button.setAttribute(
+      'aria-pressed',
+      String(button.dataset.pos === position)
+    );
+  });
+
+  refreshPreview();
+});
 $('choose').onclick=()=>$('files').click();$('addMore').onclick=()=>$('files').click();
 $('files').addEventListener('change',async e=>{const chosen=Array.from(e.target.files||[]);e.target.value='';if(chosen.length)await addFiles(chosen)});
 $('dropzone').addEventListener('dragover',e=>{e.preventDefault();$('dropzone').style.outline='2px dashed #71863a'});
@@ -87,7 +212,88 @@ function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':
 function selectItem(id){const it=items.find(x=>x.id===id);if(!it)return;activeId=id;$('empty').classList.toggle('hidden',!!it.image);$('preview').style.display=it.image?'block':'none';if(it.image){$('preview').src=it.url}if(previewUrl){URL.revokeObjectURL(previewUrl);previewUrl=null}
 $('manualDate').value='';$('captureDate').textContent=it.exifDate?fmtDate(it.exifDate):'No capture date found';const key=it.exif.DateTimeOriginal?'DateTimeOriginal':it.exif.CreateDate?'CreateDate':it.exif.ModifyDate?'ModifyDate':null;$('metaNote').textContent=it.error|| (key?`Source: ${key}. ${it.exif.Make||it.exif.Model?`Camera: ${[it.exif.Make,it.exif.Model].filter(Boolean).join(' ')}. `:''}A camera timestamp usually has no timezone.`:'No usable EXIF capture date. Set a manual date/time above to add a stamp.');$('downloadOne').disabled=!it.image;$('downloadBatch').disabled=!items.some(x=>x.image);$('reset').disabled=!it.image;renderList();refreshPreview()}
 function getRenderDate(it){if(it.id===activeId&&$('manualDate').value){let d=new Date($('manualDate').value);if(!isNaN(d))return d}return it.exifDate}
-function drawStamp(ctx,w,h,it){const d=getRenderDate(it),stamp=formatStamp(d),extra=$('customText').value.trim(),text=[stamp,extra].filter(Boolean).join('  ');if(!text)return;const fontSize=Math.max(12,w*(Number($('size').value)/100));const margin=Math.max(12,w*.025),preset=styleDefaults[styleName];ctx.save();ctx.font=`${preset.weight} ${fontSize}px "Courier New", monospace`;ctx.textBaseline='alphabetic';ctx.textAlign=position.endsWith('l')?'left':position.endsWith('r')?'right':'center';ctx.lineJoin='round';ctx.lineWidth=Math.max(1,fontSize*.035);if(preset.shadow){ctx.shadowColor='rgba(0,0,0,.75)';ctx.shadowBlur=Math.max(1,fontSize*.12);ctx.shadowOffsetX=1;ctx.shadowOffsetY=1}ctx.fillStyle=stampColor;let x=position.endsWith('l')?margin:position.endsWith('r')?w-margin:w/2;let y=position.startsWith('t')?margin+fontSize:h-margin;const spacing=preset.spacing||0;if(spacing){ctx.letterSpacing=`${Math.round(fontSize*spacing)}px`}ctx.fillText(text,x,y,Math.max(1,w-margin*2));ctx.restore()}
+function drawStamp(ctx, w, h, it) {
+  const d = getRenderDate(it);
+  const stamp = formatStamp(d);
+  const extra = $('customText').value.trim();
+
+  if (!stamp && !extra && !cameraWordmark) return;
+
+  const fontSize = Math.max(
+    12,
+    w * (Number($('size').value) / 100)
+  );
+
+  const margin = Math.max(12, w * 0.025);
+  const preset = styleDefaults[styleName];
+
+  const x = position.endsWith('l')
+    ? margin
+    : position.endsWith('r')
+      ? w - margin
+      : w / 2;
+
+  const align = position.endsWith('l')
+    ? 'left'
+    : position.endsWith('r')
+      ? 'right'
+      : 'center';
+
+  const y = position.startsWith('t')
+    ? margin + fontSize
+    : h - margin;
+
+  ctx.save();
+
+  ctx.textAlign = align;
+  ctx.textBaseline = 'alphabetic';
+  ctx.fillStyle = stampColor;
+  ctx.lineJoin = 'round';
+
+  if (preset.shadow) {
+    ctx.shadowColor = 'rgba(0,0,0,.75)';
+    ctx.shadowBlur = Math.max(1, fontSize * 0.12);
+    ctx.shadowOffsetX = 1;
+    ctx.shadowOffsetY = 1;
+  }
+
+  // Main date and optional custom text.
+  ctx.font = `${preset.weight} ${fontSize}px "Courier New", monospace`;
+
+  const mainText = [stamp, extra].filter(Boolean).join('  ');
+
+  if (mainText) {
+    ctx.fillText(mainText, x, y, Math.max(1, w - margin * 2));
+  }
+
+  // Smaller camera wordmark on a separate line.
+  if (cameraWordmark) {
+    ctx.shadowBlur = preset.shadow ? Math.max(1, fontSize * 0.08) : 0;
+
+    const logoSize = Math.max(9, fontSize * 0.52);
+    ctx.font = `700 ${logoSize}px Arial, sans-serif`;
+
+    // Give each camera name a slightly different typographic treatment.
+    if ($('cameraPreset').value === 'exilim') {
+      ctx.letterSpacing = `${Math.max(1, logoSize * 0.06)}px`;
+    } else {
+      ctx.letterSpacing = '0px';
+    }
+
+    const logoY = position.startsWith('t')
+      ? y + logoSize * 1.4
+      : y - fontSize * 1.1;
+
+    ctx.fillText(
+      cameraWordmark,
+      x,
+      logoY,
+      Math.max(1, w - margin * 2)
+    );
+  }
+
+  ctx.restore();
+}
 function canvasBlob(it){return new Promise((resolve,reject)=>{if(!it.image)return reject(Error('Image is not decoded'));const c=document.createElement('canvas');c.width=it.image.naturalWidth;c.height=it.image.naturalHeight;const ctx=c.getContext('2d',{alpha:false});ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(it.image,0,0,c.width,c.height);drawStamp(ctx,c.width,c.height,it);c.toBlob(b=>b?resolve(b):reject(Error('Canvas export failed')),'image/jpeg',.95)})}
 function dataUrl(blob){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(blob)})}
 async function preserveExif(jpegBlob,it){if(!$('preserve').checked||!window.piexif||!/^image\/jpe?g$/i.test(it.file.type)||!it.file.name.match(/\.(jpe?g)$/i))return {blob:jpegBlob,preserved:false,reason:'Metadata preservation not applicable'};try{const [sourceUrl,outUrl]=await Promise.all([dataUrl(it.file),dataUrl(jpegBlob)]);const ex=piexif.load(sourceUrl);ex['0th']=ex['0th']||{};ex['0th'][piexif.ImageIFD.Orientation]=1;ex['0th'][piexif.ImageIFD.ImageWidth]=it.image.naturalWidth;ex['0th'][piexif.ImageIFD.ImageLength]=it.image.naturalHeight;const exifBytes=piexif.dump(ex);const resultUrl=piexif.insert(exifBytes,outUrl);const res=await fetch(resultUrl);return {blob:await res.blob(),preserved:true,reason:'Original EXIF copied; orientation normalized'}}catch(err){console.warn('EXIF preservation skipped',err);return {blob:jpegBlob,preserved:false,reason:'Could not safely copy this file’s EXIF'}}}
