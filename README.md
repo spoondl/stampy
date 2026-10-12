@@ -16,9 +16,9 @@ Open `index.html` in a modern browser. The libraries load from jsDelivr, so an i
 
 ## Deploy
 ### Netlify Drop
-1. Extract `timeprint-app.zip`.
+1. Extract `stampy-app.zip`.
 2. Go to https://app.netlify.com/drop.
-3. Drag the extracted `timeprint-app` folder onto the page.
+3. Drag the extracted `stampy-app` folder onto the page.
 4. Use the URL Netlify provides.
 
 ### GitHub Pages
